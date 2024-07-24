@@ -21,7 +21,7 @@ export default function Home() {
           <main className="mt-16 md:mt-32 xl:mt-16">
             <section>
               <div className="pl-4 pr-2.5 md:px-2 xl:px-28">
-                <h1 className="text-[140px] uppercase font-semibold text-[#4E7DF5] md:text-[190px] xl:text-[260px] leading-[90%] max-w-full break-all md:text-center">
+                <h1 className="text-[140px] uppercase font-semibold text-[#4E7DF5] md:text-[190px] xl:text-[260px] leading-[90%] max-w-[1237px] mx-auto break-all md:text-center">
                   Sitio en <br className="block md:hidden" />
                   <span className="tracking-[5.6px] md:tracking-[7.6px] xl:tracking-[10.4px]">
                     construcción

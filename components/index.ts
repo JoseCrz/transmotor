@@ -1,2 +1,2 @@
-export * from "./ButtonLink/ButtonLink";
-export * from "./NavigationMenu/NavigationMenu";
+export * from "./ButtonLink";
+export * from "./NavigationMenu";

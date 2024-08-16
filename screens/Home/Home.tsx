@@ -60,8 +60,10 @@ export function Home() {
     <>
       <header className="fixed top-0 z-10 w-full py-4">
         <Container>
-          <div className="flex items-center justify-between">
-            <Image src={logo} alt="Transmotor Logo" height={27} priority />
+          <div className="flex items-center">
+            <div className="flex flex-1 justify-start">
+              <Image src={logo} alt="Transmotor Logo" height={27} priority />
+            </div>
             <NavigationMenu className="rounded-md bg-white px-6 py-2 shadow-lg">
               <NavigationMenuList className="gap-6">
                 <NavigationMenuItem>
@@ -103,9 +105,11 @@ export function Home() {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <ButtonLink variant="crystal" href="/">
-              Contacto
-            </ButtonLink>
+            <div className="flex flex-1 justify-end">
+              <ButtonLink variant="crystal" href="/">
+                Contacto
+              </ButtonLink>
+            </div>
           </div>
         </Container>
       </header>

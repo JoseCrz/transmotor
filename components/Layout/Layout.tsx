@@ -29,8 +29,14 @@ import {
 
 import logo from "./images/logo.svg";
 import logoBlack from "./images/logo-black.svg";
+import { cn } from "@/utils";
 
-export function Layout({ children }: PropsWithChildren) {
+type LayoutProps = {
+  children: ReactNode;
+  footerClassName?: string;
+};
+
+export function Layout({ footerClassName, children }: LayoutProps) {
   return (
     <>
       <header className="fixed top-0 z-10 w-full py-4">
@@ -137,7 +143,7 @@ export function Layout({ children }: PropsWithChildren) {
         </Container>
       </header>
       <main>{children}</main>
-      <footer className="bg-[#F6F6F6] py-20">
+      <footer className={cn("py-20", footerClassName)}>
         <Container>
           <div className="flex flex-col-reverse max-md:items-center max-md:gap-16 max-md:text-center md:flex-row md:justify-between">
             <div className="max-md:text-sm">

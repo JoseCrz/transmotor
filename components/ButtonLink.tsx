@@ -13,6 +13,7 @@ export const buttonVariants = cva(
         default: "rounded border-white bg-white",
         crystal:
           "rounded border border-[rgba(237,237,237,0.40)] text-white backdrop-blur",
+        ghost: "rounded border border-[#F0F0F0] bg-[#FBFBFB]",
         electric: "rounded-full border border-[#F89728] bg-[#F89728]",
       },
     },

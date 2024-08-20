@@ -24,6 +24,7 @@ import {
   AccordionItem,
   AccordionTrigger,
   ButtonLink,
+  Container,
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuLink,
@@ -686,10 +687,6 @@ export function Home() {
       </footer>
     </>
   );
-}
-
-function Container({ children }: PropsWithChildren) {
-  return <div className="px-6 md:px-16">{children}</div>;
 }
 
 type ListItemLinkProps = {

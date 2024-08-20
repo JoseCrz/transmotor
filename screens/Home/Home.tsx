@@ -1,6 +1,5 @@
-import type { PropsWithChildren, ComponentType, ReactNode } from "react";
+import type { PropsWithChildren, ReactNode } from "react";
 import Image, { ImageProps } from "next/image";
-import Link from "next/link";
 import { Mail, Phone, MapPinned } from "lucide-react";
 
 import { cn } from "@/utils";
@@ -13,7 +12,10 @@ import {
   ButtonLink,
   Container,
   Layout,
+  ServiceArticle,
 } from "@/components";
+
+import { CTASection } from "@/sections";
 
 import {
   ProjectsAccordion,
@@ -47,7 +49,7 @@ import contactImage from "./images/contact.jpeg";
 
 export function Home() {
   return (
-    <Layout>
+    <Layout headerVariant="transparent" footerClassName="bg-[#F6F6F6]">
       <section className="relative py-36 md:pb-64 xl:pb-32 xl:pt-52">
         <Image
           src={backgroundImage}
@@ -87,7 +89,7 @@ export function Home() {
             </p>
             <ButtonLink
               variant="electric"
-              href="proyectos"
+              href="/servicios"
               className="max-md:mt-6"
             >
               Ver todos
@@ -444,19 +446,7 @@ export function Home() {
           </div>
         </Container>
       </section>
-      <section className="bg-[#F6F6F6] py-40 md:py-28">
-        <Container>
-          <h2 className="mx-auto text-center text-xl md:max-w-[520px] md:text-2xl xl:max-w-[768px] xl:text-3xl">
-            Nos adaptamos a tu proyecto. Déjanos llevarlos al siguiente nivel.
-            Estás a una llamada.
-          </h2>
-          <div className="mt-10 flex justify-center">
-            <ButtonLink variant="electric" href="/">
-              Escríbenos aquí
-            </ButtonLink>
-          </div>
-        </Container>
-      </section>
+      <CTASection className="bg-[#F6F6F6]" />
       <section className="py-28">
         <Container>
           <h2 className="text-4xl md:text-6xl">Contacto</h2>
@@ -502,33 +492,6 @@ export function Home() {
         </Container>
       </section>
     </Layout>
-  );
-}
-
-type ServiceArticleProps = {
-  href: string;
-  imageSrc: ImageProps["src"];
-  title: string;
-  text: string;
-};
-
-function ServiceArticle({ href, imageSrc, title, text }: ServiceArticleProps) {
-  return (
-    <Link href={href}>
-      <article className="relative overflow-hidden rounded-xl">
-        <Image
-          src={imageSrc}
-          alt=""
-          fill
-          placeholder="blur"
-          className="absolute inset-0 object-cover"
-        />
-        <div className="relative min-h-[560px] bg-gradient-to-b from-black/80 from-40% to-transparent px-6 pt-20 text-white">
-          <h3 className="text-4xl">{title}</h3>
-          <p className="mt-6">{text}</p>
-        </div>
-      </article>
-    </Link>
   );
 }
 

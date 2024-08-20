@@ -1,4 +1,4 @@
-import type { PropsWithChildren, ComponentType, ReactNode } from "react";
+import type { ComponentType, ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import * as Dialog from "@radix-ui/react-dialog";
@@ -16,7 +16,7 @@ import { SiFacebook, SiInstagram } from "@icons-pack/react-simple-icons";
 import { manrope } from "@/styles/fonts";
 
 import { Container } from "../Container";
-import { ButtonLink } from "../ButtonLink";
+import { ButtonLink } from "../Button/ButtonLink";
 import {
   NavigationMenu,
   NavigationMenuContent,

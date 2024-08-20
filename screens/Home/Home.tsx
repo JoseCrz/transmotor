@@ -71,7 +71,7 @@ export function Home() {
     <>
       <header className="fixed top-0 z-10 w-full py-4">
         <Container>
-          <div className="flex justify-between md:hidden">
+          <div className="flex justify-between lg:hidden">
             <Image src={logo} alt="Transmotor Logo" height={27} priority />
 
             <Dialog.Root>
@@ -119,7 +119,7 @@ export function Home() {
               </Dialog.Portal>
             </Dialog.Root>
           </div>
-          <div className="hidden md:flex md:items-center">
+          <div className="hidden lg:flex lg:items-center">
             <div className="flex flex-1 justify-start">
               <Image src={logo} alt="Transmotor Logo" height={27} priority />
             </div>
@@ -173,7 +173,7 @@ export function Home() {
         </Container>
       </header>
       <main>
-        <section className="relative py-36 xl:pb-32 xl:pt-52">
+        <section className="relative py-36 md:pb-64 xl:pb-32 xl:pt-52">
           <Image
             src={backgroundImage}
             alt=""
@@ -184,15 +184,15 @@ export function Home() {
           />
           <Container>
             <div className="relative">
-              <h1 className="text-center text-4xl uppercase text-white xl:text-7xl">
+              <h1 className="mx-auto text-center text-4xl uppercase text-white md:max-w-[600px] md:text-6xl xl:text-7xl">
                 Revolucionando la industria
               </h1>
-              <p className="mx-auto mt-3 text-center text-sm text-white md:text-base xl:mt-6 xl:max-w-[787px] xl:text-lg">
+              <p className="mx-auto mt-3 text-center text-sm text-white md:mt-6 md:max-w-[540px] md:text-lg xl:max-w-[787px] xl:text-lg">
                 Transmotor es una empresa líder en la comercialización de
                 maquinaria, motores eléctricos y de combustión interna, equipos
                 de bombeo y material eléctrico y de control.
               </p>
-              <div className="mt-64">
+              <div className="mt-64 md:mt-80 xl:mt-64">
                 <div className="flex flex-col justify-center gap-4 md:flex-row">
                   <ButtonLink href="/">Contáctanos</ButtonLink>
                   <ButtonLink variant="crystal" href="/proyectos">
@@ -203,11 +203,11 @@ export function Home() {
             </div>
           </Container>
         </section>
-        <section className="pt-20 xl:pb-28">
+        <section className="pt-20 md:pb-20 xl:pb-28">
           <Container>
-            <h2 className="text-4xl xl:text-6xl">Servicios</h2>
+            <h2 className="text-4xl md:text-6xl">Servicios</h2>
             <div className="block md:flex md:items-center md:justify-between">
-              <p className="mt-6 xl:mt-4 xl:text-lg">
+              <p className="mt-6 md:text-lg xl:mt-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
               <ButtonLink
@@ -218,7 +218,7 @@ export function Home() {
                 Ver todos
               </ButtonLink>
             </div>
-            <div className="mt-12 flex flex-col gap-12 md:flex-row">
+            <div className="mt-12 flex flex-col gap-12 md:grid md:grid-cols-2 md:gap-4 xl:flex-row xl:gap-12">
               <ServiceArticle
                 href="/PENDING"
                 imageSrc={article1}
@@ -245,7 +245,7 @@ export function Home() {
             <h3 className="text-center text-xl uppercase text-[#425466]">
               Empoderando empresas en toda la región
             </h3>
-            <div className="mt-12 grid grid-cols-2 md:flex md:justify-center md:gap-6 xl:mt-11">
+            <div className="mt-12 grid grid-cols-2 md:-mx-16 md:flex md:justify-center md:gap-6 md:overflow-auto xl:mt-11">
               <Image src={carousel1} alt="logo" height={56} />
               <Image src={carousel2} alt="logo" height={56} />
               <Image src={carousel1} alt="logo" height={56} />
@@ -253,15 +253,15 @@ export function Home() {
               <Image src={carousel1} alt="logo" height={56} />
               <Image src={carousel2} alt="logo" height={56} />
             </div>
-            <p className="mx-auto mt-12 text-center text-[#425466] xl:max-w-[492px]">
+            <p className="mx-auto mt-12 text-center text-[#425466] md:max-w-[520px] md:text-lg xl:max-w-[492px]">
               Nuestra misión es empoderar las empresas con las que trabajamos.
               Buscamos llevar tus proyectos al siguiente nivel.
             </p>
           </Container>
         </section>
-        <section className="bg-[#F6F9FC] py-16 xl:py-28">
+        <section className="bg-[#F6F9FC] py-16 md:py-28">
           <Container>
-            <h2 className="text-center text-4xl text-[#0A2540] xl:text-6xl">
+            <h2 className="text-center text-4xl text-[#0A2540] md:mt-28 md:text-6xl xl:mt-0">
               Proyectos
             </h2>
             <div className="hidden md:mt-20 md:block">
@@ -387,10 +387,10 @@ export function Home() {
             </div>
           </Container>
         </section>
-        <section className="bg-[#FAFAFA] py-16 xl:py-36">
+        <section className="bg-[#FAFAFA] py-16 md:py-28 xl:py-36">
           <Container>
-            <div className="xl:grid xl:grid-cols-4">
-              <GridCell className="border-b-0 max-md:rounded-t-2xl xl:border-r-0">
+            <div className="md:grid md:grid-cols-2 xl:grid-cols-4">
+              <GridCell className="border-b-0 max-xl:border-b-0 max-md:rounded-t-2xl md:border-r-0">
                 <h2 className="mx-auto text-2xl xl:max-w-[248px]">
                   Trabajando juntos desde 1984.
                 </h2>
@@ -400,7 +400,7 @@ export function Home() {
                   <Image src={gridLogo} alt="PENDING" height={56} />
                 </GridCellBackground>
               </GridCell>
-              <GridCell className="border-b-0 xl:border-r-0">
+              <GridCell className="border-b-0 md:border-r-0">
                 <GridCellBackground>
                   <Image src={gridLogo} alt="PENDING" height={56} />
                 </GridCellBackground>
@@ -410,17 +410,17 @@ export function Home() {
                   <Image src={gridLogo} alt="PENDING" height={56} />
                 </GridCellBackground>
               </GridCell>
-              <GridCell className="max-md:border-b-0 xl:border-r-0">
+              <GridCell className="max-xl:border-b-0 max-md:border-b-0 md:border-r-0">
                 <GridCellBackground>
                   <Image src={gridLogo} alt="PENDING" height={56} />
                 </GridCellBackground>
               </GridCell>
-              <GridCell className="max-md:border-b-0 xl:border-r-0">
+              <GridCell className="max-xl:border-b-0 max-md:border-b-0 xl:border-r-0">
                 <GridCellBackground>
                   <Image src={gridLogo} alt="PENDING" height={56} />
                 </GridCellBackground>
               </GridCell>
-              <GridCell className="max-md:border-b-0 xl:border-r-0">
+              <GridCell className="max-md:border-b-0 md:border-r-0">
                 <GridCellBackground>
                   <Image src={gridLogo} alt="PENDING" height={56} />
                 </GridCellBackground>
@@ -443,7 +443,7 @@ export function Home() {
             <h2 className="text-center text-3xl xl:text-6xl">
               Preguntas frecuentes
             </h2>
-            <p className="mx-auto mt-6 text-center text-lg xl:max-w-[526px] xl:text-xl">
+            <p className="mx-auto mt-6 text-center text-lg md:max-w-[400px] xl:max-w-[526px] xl:text-xl">
               Tratamos de resolver algunas preguntas comunes que nos hacen
               nuestros clientes. Esperamos te sirvan.
             </p>
@@ -559,7 +559,7 @@ export function Home() {
             <h3 className="mt-12 text-center text-xl xl:mt-20 xl:text-3xl">
               ¿Tienes más dudas?
             </h3>
-            <p className="mt-4 text-center text-sm md:text-base">
+            <p className="mt-4 text-center text-sm xl:text-base">
               Contáctanos para que podamos respondértelas. Lo haremos con gusto.
             </p>
             <div className="mt-6 flex justify-center">
@@ -569,9 +569,9 @@ export function Home() {
             </div>
           </Container>
         </section>
-        <section className="bg-[#F6F6F6] py-40 xl:py-28">
+        <section className="bg-[#F6F6F6] py-40 md:py-28">
           <Container>
-            <h2 className="mx-auto text-center text-xl xl:max-w-[768px] xl:text-3xl">
+            <h2 className="mx-auto text-center text-xl md:max-w-[520px] md:text-2xl xl:max-w-[768px] xl:text-3xl">
               Nos adaptamos a tu proyecto. Déjanos llevarlos al siguiente nivel.
               Estás a una llamada.
             </h2>
@@ -584,11 +584,11 @@ export function Home() {
         </section>
         <section className="py-28">
           <Container>
-            <h2 className="text-4xl xl:text-6xl">Contacto</h2>
-            <p className="mt-1 xl:mt-6">
+            <h2 className="text-4xl md:text-6xl">Contacto</h2>
+            <p className="mt-1 md:mt-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
             </p>
-            <div className="mt-8 flex flex-col justify-between gap-20 md:flex-row xl:mt-32">
+            <div className="mt-8 flex flex-col justify-between gap-20 xl:mt-32 xl:flex-row">
               <div className="space-y-10">
                 <div>
                   <Mail />
@@ -689,7 +689,7 @@ export function Home() {
 }
 
 function Container({ children }: PropsWithChildren) {
-  return <div className="px-6 xl:px-16">{children}</div>;
+  return <div className="px-6 md:px-16">{children}</div>;
 }
 
 type ListItemLinkProps = {
@@ -784,11 +784,13 @@ function LocalProjectsAccordionContent({
 }: ProjectsAccordionContentProps) {
   return (
     <AccordionContent className="overflow-hidden px-12 py-16 transition-all data-[orientation=horizontal]:data-[state=closed]:animate-accordion-close data-[orientation=horizontal]:data-[state=open]:animate-accordion-open">
-      <div className="xl:w-[512px]">
+      <div className="md:w-[272px] xl:w-[512px]">
         <p className="text-3xl text-[#0A2540]">{title}</p>
-        <p className="mt-6 text-[#0A2540]">{description}</p>
+        <p className="mt-6 text-sm text-[#0A2540] md:text-base">
+          {description}
+        </p>
       </div>
-      <div className="relative mt-12 xl:h-[347px] xl:w-[909px]">
+      <div className="relative mt-12 md:h-[310px] md:w-[272px] xl:h-[347px] xl:w-[909px]">
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -811,7 +813,7 @@ function GridCell({
   return (
     <div
       className={cn(
-        "content-center border border-dashed border-[#D4D4D4] px-3.5 py-4 xl:min-h-[180px]",
+        "content-center border border-dashed border-[#D4D4D4] px-3.5 py-4 md:min-h-[180px]",
         className,
       )}
     >

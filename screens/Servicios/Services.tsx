@@ -1,5 +1,6 @@
+import { useRef } from "react";
 import Image from "next/image";
-import { Layout, ButtonLink, Container, ServiceArticle } from "@/components";
+import { Layout, Button, Container, ServiceArticle } from "@/components";
 
 import heroImage from "./images/hero.jpeg";
 
@@ -12,6 +13,7 @@ import articleImage6 from "./images/article-6.jpeg";
 import { CTASection } from "@/sections";
 
 export function Services() {
+  const sectionRef = useRef<HTMLElement | null>(null);
   return (
     <Layout>
       <section className="pt-24 md:pb-24 md:pt-32 xl:py-20">
@@ -25,9 +27,17 @@ export function Services() {
                 cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                 commodo diam libero vitae erat.
               </p>
-              <ButtonLink href="/" variant="electric" className="mt-10">
+              <Button
+                variant="electric"
+                onClick={() => {
+                  if (sectionRef.current) {
+                    sectionRef.current.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className="mt-10"
+              >
                 Conoce más
-              </ButtonLink>
+              </Button>
             </div>
             <div>
               <Image
@@ -41,7 +51,7 @@ export function Services() {
           </div>
         </Container>
       </section>
-      <section className="py-10 md:py-20 xl:py-28">
+      <section ref={sectionRef} className="py-10 md:py-20 xl:py-28">
         <Container>
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-6 xl:grid-cols-3 xl:gap-12">
             <ServiceArticle

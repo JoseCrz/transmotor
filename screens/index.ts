@@ -1,2 +1,2 @@
 export * from "./Home/Home";
-export * from "./Servicios/Services";
+export * from "./Servicios/ServicesIndex";

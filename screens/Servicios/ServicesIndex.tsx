@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { Layout, Button, Container, ServiceArticle } from "@/components";
+import { CTASection } from "@/sections";
 
 import heroImage from "./images/hero.jpeg";
 
@@ -10,9 +11,8 @@ import articleImage3 from "./images/article-3.jpeg";
 import articleImage4 from "./images/article-4.jpeg";
 import articleImage5 from "./images/article-5.jpeg";
 import articleImage6 from "./images/article-6.jpeg";
-import { CTASection } from "@/sections";
 
-export function Services() {
+export function ServicesIndex() {
   const sectionRef = useRef<HTMLElement | null>(null);
   return (
     <Layout>

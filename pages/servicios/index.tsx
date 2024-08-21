@@ -1,1 +1,1 @@
-export { Services as default } from "@/screens";
+export { ServicesIndex as default } from "@/screens";

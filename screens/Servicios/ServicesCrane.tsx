@@ -37,12 +37,13 @@ export function ServicesCrane() {
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
+
   return (
     <Layout footerClassName="bg-[#F6F6F6]">
-      <section className="xl:py-28">
+      <section className="md:pb-12 md:pt-24 xl:py-28">
         <Container>
-          <div className="rounded-xl bg-[#FCFBFB] xl:px-8 xl:py-10">
-            <div className="grid grid-cols-2 gap-12">
+          <div className="rounded-xl bg-[#FCFBFB] md:px-8 md:py-10">
+            <div className="grid grid-cols-1 md:gap-20 xl:grid-cols-2 xl:gap-12">
               <div className="overflow-hidden rounded-lg">
                 <Carousel setApi={setApi}>
                   <CarouselContent>
@@ -75,14 +76,14 @@ export function ServicesCrane() {
                 </Carousel>
               </div>
               <div>
-                <h1 className="xl:text-4xl">Servicio de Grua</h1>
-                <p className="xl:mt-6">
+                <h1 className="md:text-4xl">Servicio de Grua</h1>
+                <p className="md:mt-6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique. Duis
                   cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                   commodo diam libero vitae erat.
                 </p>
-                <ul className="list-disc space-y-2 pl-5 xl:mt-4">
+                <ul className="list-disc space-y-2 pl-5 md:mt-4">
                   <li>Lorem ipsum dolor sit amet.</li>
                   <li>Lorem ipsum dolor sit amet.</li>
                   <li>Lorem ipsum dolor sit amet.</li>
@@ -146,7 +147,7 @@ function ServiceAccordionItem({
 function ServiceAccordionTrigger({ children }: PropsWithChildren) {
   return (
     <Accordion.Header>
-      <Accordion.Trigger className="group flex w-full items-center justify-between py-3 xl:text-xl">
+      <Accordion.Trigger className="group flex w-full items-center justify-between py-4 md:text-xl">
         {children}
         <ChevronDown
           aria-hidden

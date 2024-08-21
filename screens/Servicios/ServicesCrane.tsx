@@ -40,50 +40,55 @@ export function ServicesCrane() {
 
   return (
     <Layout footerClassName="bg-[#F6F6F6]">
-      <section className="md:pb-12 md:pt-24 xl:py-28">
+      <section className="pb-14 pt-24 md:pb-12 xl:py-28">
         <Container>
-          <div className="rounded-xl bg-[#FCFBFB] md:px-8 md:py-10">
-            <div className="grid grid-cols-1 md:gap-20 xl:grid-cols-2 xl:gap-12">
-              <div className="overflow-hidden rounded-lg">
-                <Carousel setApi={setApi}>
-                  <CarouselContent>
-                    <CarouselItem>
-                      <CarouselImage src={carouselImage1} alt="PENDING" />
-                    </CarouselItem>
-                    <CarouselItem>
-                      <CarouselImage src={carouselImage2} alt="PENDING" />
-                    </CarouselItem>
-                    <CarouselItem>
-                      <CarouselImage src={carouselImage3} alt="PENDING" />
-                    </CarouselItem>
-                  </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
-                  <div className="absolute bottom-4 flex w-full justify-center gap-2">
-                    {Array.from({ length: count }).map((_, index) => {
-                      const isActive = current === index;
-                      return (
-                        <div
-                          key={index}
-                          className={cn(
-                            "size-2 rounded-full transition-colors",
-                            isActive ? "bg-white" : "bg-[#8D8D8D]",
-                          )}
-                        />
-                      );
-                    })}
-                  </div>
-                </Carousel>
+          <div className="rounded-xl bg-[#FCFBFB] px-2 py-4 md:px-8 md:py-10">
+            <div className="grid grid-cols-1 gap-8 md:gap-12 xl:grid-cols-2 xl:gap-12">
+              <div>
+                <h1 className="block text-3xl md:text-4xl xl:hidden">
+                  Servicio de Grua
+                </h1>
+                <div className="mt-4 overflow-hidden rounded-lg md:mt-6 xl:mt-0">
+                  <Carousel setApi={setApi}>
+                    <CarouselContent>
+                      <CarouselItem>
+                        <CarouselImage src={carouselImage1} alt="PENDING" />
+                      </CarouselItem>
+                      <CarouselItem>
+                        <CarouselImage src={carouselImage2} alt="PENDING" />
+                      </CarouselItem>
+                      <CarouselItem>
+                        <CarouselImage src={carouselImage3} alt="PENDING" />
+                      </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                    <div className="absolute bottom-4 flex w-full justify-center gap-2">
+                      {Array.from({ length: count }).map((_, index) => {
+                        const isActive = current === index;
+                        return (
+                          <div
+                            key={index}
+                            className={cn(
+                              "size-2 rounded-full transition-colors",
+                              isActive ? "bg-white" : "bg-[#8D8D8D]",
+                            )}
+                          />
+                        );
+                      })}
+                    </div>
+                  </Carousel>
+                </div>
               </div>
               <div>
-                <h1 className="md:text-4xl">Servicio de Grua</h1>
-                <p className="md:mt-6">
+                <h1 className="hidden text-4xl xl:block">Servicio de Grua</h1>
+                <p className="xl:mt-6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique. Duis
                   cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                   commodo diam libero vitae erat.
                 </p>
-                <ul className="list-disc space-y-2 pl-5 md:mt-4">
+                <ul className="mt-4 list-disc space-y-2 pl-5">
                   <li>Lorem ipsum dolor sit amet.</li>
                   <li>Lorem ipsum dolor sit amet.</li>
                   <li>Lorem ipsum dolor sit amet.</li>
@@ -147,7 +152,7 @@ function ServiceAccordionItem({
 function ServiceAccordionTrigger({ children }: PropsWithChildren) {
   return (
     <Accordion.Header>
-      <Accordion.Trigger className="group flex w-full items-center justify-between py-4 md:text-xl">
+      <Accordion.Trigger className="group flex w-full items-center justify-between py-4 text-xl">
         {children}
         <ChevronDown
           aria-hidden
@@ -168,7 +173,7 @@ function ServiceAccordionContent({ children }: PropsWithChildren) {
 
 function CarouselImage({ src, alt, ...rest }: ImageProps) {
   return (
-    <div className="relative h-[700px]">
+    <div className="relative h-[475px] md:h-[600px] xl:h-[700px]">
       <Image
         src={src}
         alt={alt}

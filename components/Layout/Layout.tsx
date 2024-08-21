@@ -137,40 +137,31 @@ function MobileHeader({ variant = "default" }: { variant?: HeaderVariant }) {
         <Dialog.Portal>
           <Dialog.Overlay />
           <Dialog.Content
-            className={`fixed left-[50%] top-[50%] z-50 h-dvh w-full translate-x-[-50%] translate-y-[-50%] bg-white px-6 py-4 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg ${manrope.className} font-sans`}
+            className={`fixed left-[50%] top-[50%] z-50 h-dvh w-full translate-x-[-50%] translate-y-[-50%] bg-white py-4 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg ${manrope.className} font-sans`}
           >
-            <Dialog.Title className="sr-only">Menu</Dialog.Title>
-            <div className="flex justify-end">
-              <Dialog.Close className="rounded bg-black p-1 text-white">
-                <X />
-              </Dialog.Close>
-            </div>
-            <div className="mt-24">
-              <nav>
-                <ul className="space-y-8">
-                  <MobileMenuItem href="/PENDING" Icon={PlugZap}>
-                    Instalaciones de baja, media y alta tensión
-                  </MobileMenuItem>
-                  <MobileMenuItem href="/" Icon={Dam}>
-                    Instalaciones hidráulicas
-                  </MobileMenuItem>
-                  <MobileMenuItem href="/" Icon={FireExtinguisher}>
-                    Instalaciones contra incendio
-                  </MobileMenuItem>
-                  <MobileMenuItem href="/" Icon={FileStack}>
-                    Trámites CFE, SENER, UVIE
-                  </MobileMenuItem>
-                  <MobileMenuItem href="/" Icon={CarFront}>
-                    Servicio de grua
-                  </MobileMenuItem>
-                </ul>
-              </nav>
-              <div className="mt-52 flex justify-center">
-                <ButtonLink variant="electric" href="PENDING">
-                  Contáctanos
-                </ButtonLink>
+            <Container>
+              <div className="flex justify-end">
+                <Dialog.Close className="rounded bg-black p-1 text-white">
+                  <X />
+                </Dialog.Close>
               </div>
-            </div>
+              <div className="mt-24">
+                <nav>
+                  <ul className="flex flex-col items-center gap-8">
+                    <MobileMenuItem href="/">Home</MobileMenuItem>
+                    <MobileMenuItem href="/servicios">Servicios</MobileMenuItem>
+                    <MobileMenuItem href="/proyectos">Proyectos</MobileMenuItem>
+                    <MobileMenuItem href="/">Acerca de nosotros</MobileMenuItem>
+                  </ul>
+                </nav>
+                <div className="mt-52 flex justify-center">
+                  <ButtonLink variant="electric" href="PENDING">
+                    Contáctanos
+                  </ButtonLink>
+                </div>
+              </div>
+            </Container>
+            <Dialog.Title className="sr-only">Menu</Dialog.Title>
           </Dialog.Content>
         </Dialog.Portal>
       </Dialog.Root>
@@ -247,18 +238,15 @@ function DesktopHeader({ variant = "default" }: { variant?: HeaderVariant }) {
 
 type MobileMenuItemProps = {
   href: string;
-  Icon: ComponentType;
+
   children: ReactNode;
 };
 
-function MobileMenuItem({ href, Icon, children }: MobileMenuItemProps) {
+function MobileMenuItem({ href, children }: MobileMenuItemProps) {
   return (
     <li>
-      <Link href={href} className="flex items-center gap-4">
-        <div className="p-3">
-          <Icon aria-hidden />
-        </div>
-        <div className="text-lg">{children}</div>
+      <Link href={href} className="text-lg">
+        {children}
       </Link>
     </li>
   );

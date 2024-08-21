@@ -11,13 +11,13 @@ import project3Image from "./images/project-3.jpeg";
 export function ProjectsIndex() {
   return (
     <Layout>
-      <section className="xl:pb-28 xl:pt-44">
+      <section className="md:pb-28 md:pt-32 xl:pb-28 xl:pt-44">
         <Container>
-          <h1 className="xl:text-6xl">Proyectos</h1>
-          <p className="xl:mt-6 xl:text-xl">
+          <h1 className="md:text-4xl xl:text-6xl">Proyectos</h1>
+          <p className="md:mt-6 xl:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
-          <div className="mt-20 space-y-12">
+          <div className="md:mt-11 md:space-y-4 xl:mt-20 xl:space-y-12">
             <ProjectArticle
               title="Proyecto 1"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
@@ -63,9 +63,9 @@ function ProjectArticle({
   imageAlt,
 }: ProjectArticleProps) {
   return (
-    <article className="group grid rounded-xl bg-[#F6F6F6] px-6 py-8 md:grid-cols-2 md:items-center xl:gap-20">
+    <article className="group grid rounded-xl bg-[#F6F6F6] px-6 py-8 md:grid-cols-2 md:items-center md:gap-4 xl:gap-20">
       <div className="group-even:order-last">
-        <h2 className="xl:text-4xl"></h2>
+        <h2 className="md:text-3xl xl:text-4xl">{title}</h2>
         <p className="mt-2 xl:text-lg">{text}</p>
         <Link
           href="/proyectos/proyecto-1"

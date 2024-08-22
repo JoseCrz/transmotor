@@ -151,7 +151,9 @@ function MobileHeader({ variant = "default" }: { variant?: HeaderVariant }) {
                     <MobileMenuItem href="/">Home</MobileMenuItem>
                     <MobileMenuItem href="/servicios">Servicios</MobileMenuItem>
                     <MobileMenuItem href="/proyectos">Proyectos</MobileMenuItem>
-                    <MobileMenuItem href="/">Acerca de nosotros</MobileMenuItem>
+                    <MobileMenuItem href="/nosotros">
+                      Acerca de nosotros
+                    </MobileMenuItem>
                   </ul>
                 </nav>
                 <div className="mt-52 flex justify-center">

@@ -500,7 +500,7 @@ function LocalProjectsAccordionContent({
           {description}
         </p>
       </div>
-      <div className="relative mt-12 md:h-[310px] md:w-[272px] xl:h-[347px] xl:w-[909px]">
+      <div className="relative mt-12 md:h-[310px] md:w-[272px] xl:h-[347px] xl:w-[512px]">
         <Image
           src={imageSrc}
           alt={imageAlt}

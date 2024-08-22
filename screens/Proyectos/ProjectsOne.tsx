@@ -11,9 +11,9 @@ import projectOneImage5 from "./images/project-one/project-one-5.jpeg";
 export function ProjectsOne() {
   return (
     <Layout footerClassName="bg-[#F6F6F6]">
-      <section className="xl:pt-32">
+      <section className="md:pt-32">
         <Container>
-          <div className="rounded-xl bg-[#F6F6F6] xl:px-6 xl:py-10">
+          <div className="rounded-xl bg-[#F6F6F6] md:px-3 md:py-10 xl:px-6">
             <div className="grid grid-cols-4 grid-rows-[304px,304px] gap-4">
               <Image
                 src={projectOneImage1}
@@ -61,7 +61,7 @@ export function ProjectsOne() {
                 className="h-full rounded-lg object-cover object-center"
               />
             </div>
-            <h1 className="xl:mt-12 xl:text-5xl">Proyecto 1</h1>
+            <h1 className="md:mt-12 md:text-4xl xl:text-5xl">Proyecto 1</h1>
             <div className="mt-8 space-y-4">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.

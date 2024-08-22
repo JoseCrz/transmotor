@@ -1,4 +1,5 @@
 export * from "./Home/Home";
+export * from "./Nosotros/AboutUs";
 export * from "./Proyectos/ProjectsIndex";
 export * from "./Proyectos/ProjectsOne";
 export * from "./Servicios/ServicesIndex";
